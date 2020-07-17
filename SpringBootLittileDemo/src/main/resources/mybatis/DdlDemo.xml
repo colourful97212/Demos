@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.colourful.springbootlittiledemo.dao.DdlDemo">
+
+    <!--是否存在该流程的cshu表-->
+    <select id="ddlIsServiceCshuTableExist" resultType="java.lang.Boolean">
+        SELECT count(table_name) FROM information_schema.tables WHERE table_schema = 'springboot_demo_db' and TABLE_NAME = #{tableName}
+    </select>
+
+    <!--创建表-->
+    <update id="createNewTableByName">
+        CREATE TABLE ${dbName}.${tableName} (
+          `id` int(20) NOT NULL AUTO_INCREMENT,
+          `unstructured_flow_id` varchar(30) DEFAULT NULL,
+          `unstructured_module_id` int(10) DEFAULT NULL,
+          `file_uuid` varchar(50) DEFAULT NULL COMMENT '文件唯一编号',
+          `service_name` varchar(30) DEFAULT NULL COMMENT '业务名',
+          `mode_type` varchar(50) DEFAULT NULL COMMENT 'http\\ftp\\ws',
+          `mode_address` varchar(255) DEFAULT NULL,
+          `source_file` varchar(255) DEFAULT NULL COMMENT '源端文件名',
+          `source_dir` text COMMENT '源端路径',
+          `target_file` varchar(255) DEFAULT NULL COMMENT '目标端文件名',
+          `target_ip` varchar(50) DEFAULT NULL COMMENT '目标端ip',
+          `target_port` int(10) DEFAULT NULL COMMENT '目标端端口',
+          `target_path` text COMMENT '目标端路径',
+          `load_type` varchar(20) DEFAULT NULL COMMENT '类型     (意为txt,csv,xls,pdf等 ，非云端视频为mp4.rmvb等各种原始格式，流数据，云端视频文件类型定义为固定标识符cloud)       ',
+          `read_size` bigint(20) DEFAULT NULL COMMENT '文件大小',
+          `load_status` int(5) DEFAULT NULL,
+          `load_receive_time` datetime DEFAULT NULL COMMENT '装载接收时间',
+          `load_end_time` datetime DEFAULT NULL COMMENT '装载结束时间',
+          `load_error_msg` text COMMENT '加载错误信息',
+          `business_name` varchar(200) DEFAULT NULL,
+          `title` varchar(500) DEFAULT NULL COMMENT '默认文件名',
+          `description` varchar(500) DEFAULT NULL COMMENT '详情说明',
+          `dir_id` varchar(200) DEFAULT NULL COMMENT '挂载目录ID',
+          PRIMARY KEY (`id`)
+        ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+    </update>
+
+    <select id="getInfoTest" resultType="java.util.Map">
+        select * from test where id = #{id}
+    </select>
+
+</mapper>
