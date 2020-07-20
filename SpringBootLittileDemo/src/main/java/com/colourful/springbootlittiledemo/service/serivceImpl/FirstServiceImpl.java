@@ -27,7 +27,7 @@ public class FirstServiceImpl implements FirstSerivce
         log.info(String.valueOf(ddlDemo.getInfoTest("1")));
         Boolean bola = ddlDemo.ddlIsServiceCshuTableExist("gonglige");
         log.info(String.valueOf(bola));
-        ddlDemo.createNewTableByName("music","gonglige");
+        ddlDemo.createNewTableByName("springboot_demo_db","gonglige");
         log.info(String.valueOf(ddlDemo.ddlIsServiceCshuTableExist("gonglige")));
     }
 }
