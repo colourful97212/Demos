@@ -17,4 +17,6 @@ public interface DdlDemo
     void createNewTableByName(@Param("dbName")String dbName, @Param("tableName") String tableName);
 
     Map getInfoTest(@Param ("id") String id);
+
+    Boolean add();
 }

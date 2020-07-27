@@ -44,4 +44,12 @@ public class FirstController
         jsonObject.put("message", "Hello World");
         return jsonObject;
     }
+
+    @CrossOrigin
+    @ResponseBody
+    @RequestMapping("/addIsSuccess")
+    public boolean add()
+    {
+        return firstSerivce.add();
+    }
 }

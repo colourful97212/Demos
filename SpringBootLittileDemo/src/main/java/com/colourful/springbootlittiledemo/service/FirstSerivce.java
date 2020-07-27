@@ -9,4 +9,6 @@ package com.colourful.springbootlittiledemo.service;
 public interface FirstSerivce
 {
     public void DdlDemo();
+
+    public boolean add();
 }

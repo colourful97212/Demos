@@ -30,4 +30,10 @@ public class FirstServiceImpl implements FirstSerivce
         ddlDemo.createNewTableByName("springboot_demo_db","gonglige");
         log.info(String.valueOf(ddlDemo.ddlIsServiceCshuTableExist("gonglige")));
     }
+
+    @Override
+    public boolean add()
+    {
+        return ddlDemo.add();
+    }
 }
