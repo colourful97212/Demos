@@ -1,5 +1,6 @@
 package aboutHttpClientSomething;
 
+import com.alibaba.fastjson.JSONObject;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -7,6 +8,7 @@ import org.apache.http.ParseException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
@@ -14,6 +16,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -28,6 +31,20 @@ public class HttpClientDemo
     public static void main(String[] args)
     {
         CloseableHttpClient httpclient = HttpClients.createDefault();
+
+        //参数为json串时如此传参
+//        Map<String,String> map = new HashMap();
+//        map.put("dsgDatasourceId",dsgDatasourceId);
+//        map.put("srcId",srcId);
+//        map.put("shareSrcId",shareSrcId);
+//        map.put("tableName",tableName);
+//        map.put("alias",alias);
+//
+//
+//        String str = JSONObject.toJSONString(map);
+//        StringEntity paramsEntity = null;
+//
+//        paramsEntity = new StringEntity(str);
 
         List<NameValuePair> formparams = new ArrayList<NameValuePair>();
 
@@ -70,5 +87,15 @@ public class HttpClientDemo
         }
 
         System.out.println(result);
+
+        JSONObject jsonObject = JSONObject.parseObject(result);
+
+        System.out.println(jsonObject);
+
+        for (Map.Entry<String, Object> entry : jsonObject.entrySet())
+        {
+            System.out.println("key = " + entry.getKey());
+            System.out.println("value = " + entry.getValue());
+        }
     }
 }
