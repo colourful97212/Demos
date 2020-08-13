@@ -5,10 +5,7 @@ import com.colourful.springbootlittiledemo.dao.DdlDemo;
 import com.colourful.springbootlittiledemo.service.FirstSerivce;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Description
@@ -26,7 +23,7 @@ public class FirstController
 
     @CrossOrigin
     @ResponseBody
-    @RequestMapping("/first")
+    @RequestMapping(value = "/first", method = RequestMethod.GET)
     public JSONObject first()
     {
         JSONObject jsonObject = new JSONObject();
@@ -36,7 +33,7 @@ public class FirstController
 
     @CrossOrigin
     @ResponseBody
-    @RequestMapping("/ddlDemo")
+    @RequestMapping(value = "/ddlDemo" ,method = RequestMethod.GET)
     public JSONObject ddlDemo()
     {
         firstSerivce.DdlDemo();
@@ -47,7 +44,7 @@ public class FirstController
 
     @CrossOrigin
     @ResponseBody
-    @RequestMapping("/addIsSuccess")
+    @RequestMapping(value = "/addIsSuccess", method = RequestMethod.GET)
     public boolean add()
     {
         return firstSerivce.add();
