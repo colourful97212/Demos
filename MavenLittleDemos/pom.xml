@@ -68,6 +68,13 @@
             <artifactId>dom4j</artifactId>
             <version>1.6.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.pivotal</groupId>
+            <artifactId>testJAR</artifactId>
+            <version>1.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/MavenLittleDemos-1.0-SNAPSHOT.jar</systemPath>
+        </dependency>
     </dependencies>
 
 
