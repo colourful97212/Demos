@@ -1,4 +1,4 @@
-package aboutThreadSomething;
+package aboutThreadSomething.aboutStopThread;
 
 /**
  * @Description
