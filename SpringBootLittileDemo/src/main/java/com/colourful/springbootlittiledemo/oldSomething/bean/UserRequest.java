@@ -1,4 +1,4 @@
-package com.colourful.springbootlittiledemo.bean;
+package com.colourful.springbootlittiledemo.oldSomething.bean;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

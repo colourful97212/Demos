@@ -13,7 +13,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.colourful.springbootlittiledemo"})
-@MapperScan(basePackages ="com.colourful.springbootlittiledemo.dao")
+@MapperScan(basePackages ="com.colourful.springbootlittiledemo.oldSomething.dao")
 public class SpringbootlittiledemoApplication extends SpringBootServletInitializer
 {
 

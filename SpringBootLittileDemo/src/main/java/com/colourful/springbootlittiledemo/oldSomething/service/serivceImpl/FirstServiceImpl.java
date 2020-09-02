@@ -1,7 +1,7 @@
-package com.colourful.springbootlittiledemo.service.serivceImpl;
+package com.colourful.springbootlittiledemo.oldSomething.service.serivceImpl;
 
-import com.colourful.springbootlittiledemo.dao.DdlDemo;
-import com.colourful.springbootlittiledemo.service.FirstSerivce;
+import com.colourful.springbootlittiledemo.oldSomething.dao.DdlDemo;
+import com.colourful.springbootlittiledemo.oldSomething.service.FirstSerivce;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

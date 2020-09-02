@@ -1,4 +1,4 @@
-package com.colourful.springbootlittiledemo.config;
+package com.colourful.springbootlittiledemo.oldSomething.config;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;

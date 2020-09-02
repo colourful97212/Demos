@@ -1,4 +1,4 @@
-package com.colourful.springbootlittiledemo.dao;
+package com.colourful.springbootlittiledemo.oldSomething.dao;
 
 import org.apache.ibatis.annotations.Param;
 

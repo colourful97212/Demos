@@ -1,8 +1,8 @@
-package com.colourful.springbootlittiledemo.controller;
+package com.colourful.springbootlittiledemo.oldSomething.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.colourful.springbootlittiledemo.dao.DdlDemo;
-import com.colourful.springbootlittiledemo.service.FirstSerivce;
+import com.colourful.springbootlittiledemo.oldSomething.dao.DdlDemo;
+import com.colourful.springbootlittiledemo.oldSomething.service.FirstSerivce;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

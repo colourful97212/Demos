@@ -1,7 +1,7 @@
-package com.colourful.springbootlittiledemo.endpoint;
+package com.colourful.springbootlittiledemo.oldSomething.endpoint;
 
-import com.colourful.springbootlittiledemo.bean.UserRequest;
-import com.colourful.springbootlittiledemo.bean.UserResponse;
+import com.colourful.springbootlittiledemo.oldSomething.bean.UserRequest;
+import com.colourful.springbootlittiledemo.oldSomething.bean.UserResponse;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
